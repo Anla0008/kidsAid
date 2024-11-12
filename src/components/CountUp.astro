@@ -1,0 +1,54 @@
+<section style="text-align: center; padding: 2rem;">
+  <h1>Så mange børn har vi givet unikke oplevelser i år</h1>
+  <div id="helped" data-target="20000" class="count-up">0</div>
+</section>
+
+<style>
+    h1{
+        font-size: 5rem;
+        margin-top: 200px;
+    }
+ .count-up {
+    font-size: 6rem; 
+    font-weight: bold;
+    color: #FE5802; /* Skift farven på tallet */
+    margin-top: 1rem;
+    animation: pop 0.3s ease-out; /* Animation når tallet tæller op */
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+
+<script>
+  function countUp(element, target) {
+    let start = 0;
+    const duration = 5000; // Varighed af animationen i millisekunder
+    const increment = 70; // Tæller op med 20 ad gangen
+
+    function updateCount() {
+      start += increment;
+      if (start >= target) {
+        element.innerText = target.toLocaleString(); // Stop ved det endelige mål
+      } else {
+        element.innerText = start.toLocaleString();
+        requestAnimationFrame(updateCount);
+      }
+    }
+    updateCount();
+  }
+
+  window.addEventListener('load', () => {
+    const helpedElement = document.getElementById('helped');
+    countUp(helpedElement, parseInt(helpedElement.getAttribute('data-target')));
+  });
+</script>

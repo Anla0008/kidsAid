@@ -2,7 +2,9 @@
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import GulTekstboks from "../components/GulTekstboks.astro";
+import CountUp from "../components/CountUp.astro"
 import GroenTekstboks from "../components/GroenTekstboks.astro";
+import BlaaTekstboks from "../components/BlaaTekstboks.astro"
 ---
 
 <html lang="en">
@@ -19,12 +21,22 @@ import GroenTekstboks from "../components/GroenTekstboks.astro";
 		<Hero />
         <video src="https://anarikkelarsen.dk/kea/09_indhold_II/storopl%C3%B8sning_kidsaid_video.mp4" controls></video>
 	<GulTekstboks/>
-    </body> 
+    <CountUp/>
+    <GroenTekstboks/>
+    <div class="gifDiv">
+    <h1 class="gifTekst">KidsAid Tryllerne får mig til at føle</h1>
+<img class="gif" src="https://anarikkelarsen.dk/kea/09_indhold_II/GIF3.0_crop.gif" alt="Beskrivelse af GIF" />
+</div> 
+<BlaaTekstboks/>
+</body> 
 </html>
 
 <style>
     :root {
         --main-font: 'Montserrat', sans-serif;
+    }
+    body{
+        background-color: #D9D9D9 40%;
     }
 
     /* Desktop */
@@ -47,5 +59,24 @@ import GroenTekstboks from "../components/GroenTekstboks.astro";
         max-width: 100%;
     }
 
+    .gifDiv{
+        margin-top: 200px;
+    }
+.gif {
+    max-width: 50%; 
+    height: auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gifTekst {
+    text-align: center;
+    font-size: 4rem;
+}
+
+
+
     /* Mobil */
+
 </style>

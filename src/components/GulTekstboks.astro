@@ -1,7 +1,7 @@
 ---
 
 ---
-    <div class="box">
+    <div class="box1">
         <div class="gul_boks">
             <div class="overlap-group">
                 <img class="yellowblob" src="/public/gallery/yellowblob.svg" alt="Gul blob">
@@ -21,12 +21,13 @@
 
 <style>
     /**** Desktop *****/
-    .box {
+    .box1 {
         width: 1295px;
         height: 763px;
+        margin-top: 200px;
     }
 
-    .box .ny-gul-boks {
+    .box1 .ny-gul-boks {
         position: fixed;
         width: 1299px;
         height: 763px;
@@ -34,13 +35,13 @@
         left: 0;
     }
 
-    .box .overlap-group {
+    .box1 .overlap-group {
         position: relative;
         width: 1295px;
         height: 763px;
     }
 
-    .box .image {
+    .box1 .image {
         position: absolute;
         width: 578px;
         height: 515px;
@@ -48,7 +49,7 @@
         left: 0;
     }
 
-    .box .yellowblob {
+    .box1 .yellowblob {
         position: absolute;
         width: 865px;
         height: 763px;
@@ -57,48 +58,42 @@
         object-fit: cover;
     }
 
-    .box .endnu-en-gang-tak {
+    .box1 .endnu-en-gang-tak {
         position: absolute;
         width: 580px;
         top: 185px;
         left: 621px;
-        font-family: "Montserrat-Medium", Helvetica;
-        font-weight: 500;
-        color: #000000;
         font-size: 24px;
         letter-spacing: 0;
         line-height: normal;
     }
 
-    .box .text-wrapper {
+    .box1 .text-wrapper {
         position: absolute;
         width: 84px;
         top: 517px;
         left: 837px;
-        font-family: "Montagu Slab-Medium", Helvetica;
-        font-weight: 500;
-        color: #000000;
-        font-size: 200px;
         letter-spacing: 0;
         line-height: normal;
         white-space: nowrap;
+        font-size: 8rem;
     }
 
     /**** Mobil *****/
     @media (max-width: 768px) {
-        .box {
+        .box1 {
             width: 100%;
             height: auto;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        .box .overlap-group {
+        .box1 .overlap-group {
             width: 100%;
             height: auto;
         }
 
-        .box .image {
+        .box1 .image {
             width: 100%;
             height: auto;
             top: 0;
@@ -106,7 +101,7 @@
             position: relative;
         }
 
-        .box .yellowblob {
+        .box1 .yellowblob {
             width: 100%;
             height: auto;
             top: 0;
@@ -116,7 +111,7 @@
             margin-top: 20px;
         }
 
-        .box .endnu-en-gang-tak {
+        .box1 .endnu-en-gang-tak {
             width: 100%;
             position: relative;
             top: 0;
@@ -126,7 +121,7 @@
             text-align: center;
         }
 
-        .box .text-wrapper {
+        .box1 .text-wrapper {
             width: auto;
             position: relative;
             top: 0;

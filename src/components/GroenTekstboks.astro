@@ -1,0 +1,131 @@
+---
+
+---
+    <div class="box2">
+        <div class="groen_boks">
+            <div class="overlap-group">
+                <img class="greenblob" src="/public/gallery/greenblob.svg" alt="Grøn blob">
+                <img class="image" src="/public/gallery/groenbillede.svg" alt="Grønt billede">
+                <p class="groenTekst">
+                        ”Det var en fantastisk oplevelse for hele familien at komme til LEGOLand med overnatning. Gry var slet ikke til at styre. Hun sagde flere gange til os, at det var den bedste dag i hendes liv. Gry og hendes lillebror Niels snakker stadig om turen til LEGOLand og vil meget gerne snart afsted igen.”
+                        <br><br>
+                        Mette Sørensen, mor til Gry med leukæmi
+                </p>
+                <div class="text-wrapper">“</div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /**** Desktop *****/
+    .box2 {
+        width: 1295px;
+        height: 763px;
+        margin-top: 200px;
+    }
+
+    .box2 .groen-boks {
+        position: fixed;
+        width: 1299px;
+        height: 763px;
+        top: 0;
+        left: 0;
+    }
+
+    .box2 .overlap-group {
+        position: relative;
+        width: 1295px;
+        height: 763px;
+    }
+
+    .box2 .image {
+        position: absolute;
+        width: 578px;
+        height: 515px;
+        top: 53px;
+        left: 0;
+    }
+
+    .box2 .greenblob {
+        position: absolute;
+        width: 865px;
+        height: 763px;
+        top: 0;
+        left: 430px;
+        object-fit: cover;
+    }
+
+    .box2 .groenTekst {
+        position: absolute;
+        width: 580px;
+        top: 185px;
+        left: 621px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .box2 .text-wrapper {
+        position: absolute;
+        width: 84px;
+        top: 517px;
+        left: 837px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+        font-size: 8rem;
+    }
+
+    /**** Mobil *****/
+    @media (max-width: 768px) {
+        .box2 {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box2 .overlap-group {
+            width: 100%;
+            height: auto;
+        }
+
+        .box2 .image {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+
+        .box2 .greenblob {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            position: relative;
+            object-fit: contain;
+            margin-top: 20px;
+        }
+
+        .box2 .groenTekst {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .box2 .text-wrapper {
+            width: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 80px;
+            text-align: center;
+            margin: 10px auto;
+        }
+    }
+</style>
