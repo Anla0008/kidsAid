@@ -1,0 +1,139 @@
+---
+
+---
+    <div class="box">
+        <div class="gul_boks">
+            <div class="overlap-group">
+                <img class="yellowblob" src="/public/gallery/yellowblob.svg" alt="Gul blob">
+                <img class="image" src="/public/gallery/chrisser.svg" alt="Chrisser">
+                <p class="endnu-en-gang-tak">
+                    ”Endnu en gang tak for en fantastisk oplevelse. Det er så fedt at opleve det hele samt møde de
+                    forskellige
+                    familier igen til et KidsAid arrangement. Nu er vi mætte, friske, glade og klar til turen hjem til
+                    Fyn fra Frederikshavn. Frederikke, Mads og Mathias siger tak til jer alle i KidsAid
+                    Danmark.”<br><br>
+                    Tina Knudsen, mor til Mathias med bl.a. leddegigt og epilepsi efter.
+                </p>
+                <div class="text-wrapper">“</div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    /**** Desktop *****/
+    .box {
+        width: 1295px;
+        height: 763px;
+    }
+
+    .box .ny-gul-boks {
+        position: fixed;
+        width: 1299px;
+        height: 763px;
+        top: 0;
+        left: 0;
+    }
+
+    .box .overlap-group {
+        position: relative;
+        width: 1295px;
+        height: 763px;
+    }
+
+    .box .image {
+        position: absolute;
+        width: 578px;
+        height: 515px;
+        top: 53px;
+        left: 0;
+    }
+
+    .box .yellowblob {
+        position: absolute;
+        width: 865px;
+        height: 763px;
+        top: 0;
+        left: 430px;
+        object-fit: cover;
+    }
+
+    .box .endnu-en-gang-tak {
+        position: absolute;
+        width: 580px;
+        top: 185px;
+        left: 621px;
+        font-family: "Montserrat-Medium", Helvetica;
+        font-weight: 500;
+        color: #000000;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .box .text-wrapper {
+        position: absolute;
+        width: 84px;
+        top: 517px;
+        left: 837px;
+        font-family: "Montagu Slab-Medium", Helvetica;
+        font-weight: 500;
+        color: #000000;
+        font-size: 200px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    /**** Mobil *****/
+    @media (max-width: 768px) {
+        .box {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box .overlap-group {
+            width: 100%;
+            height: auto;
+        }
+
+        .box .image {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+
+        .box .yellowblob {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            position: relative;
+            object-fit: contain;
+            margin-top: 20px;
+        }
+
+        .box .endnu-en-gang-tak {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .box .text-wrapper {
+            width: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 80px;
+            text-align: center;
+            margin: 10px auto;
+        }
+    }
+</style>

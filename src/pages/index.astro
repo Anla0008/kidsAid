@@ -1,5 +1,6 @@
 ---
-
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <html lang="en">
@@ -8,51 +9,40 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 		<title>KidsAid Tryllerne</title>
 	</head>
 	<body>
-
-		<div class="header">
-    <div class="logo">
-        <a href="https://kidsaid.dk/">
-            <img src="https://kidsaid.dk/wp-content/uploads/2021/11/KidsAid_Logo-e1637330468172.png" alt="KidsAID Logo" width="200" height="49">
-        </a>
-    </div>
-
-    <nav class="main-menu">
-        <ul>
-            <li><a href="https://kidsaid.dk/om-kidsaid/">Om KidsAid</a></li>
-            <li><a href="https://kidsaid.dk/indsamling/">Indsamling</a></li>
-            <li><a href="https://kidsaid.dk/for-boernene-2/">For Børnene</a></li>
-            <li><a href="https://kidsaid.dk/nyhedsbrev/">Nyhedsbrev</a></li>
-            <li><a href="https://kidsaid.dk/kontakt-os/">Kontakt Os</a></li>
-        </ul>
-    </nav>
-
-    <div class="search-bar">
-        <form action="https://kidsaid.dk/" method="get">
-            <input type="search" name="s" placeholder="Søg...">
-            <button type="submit">Søg</button>
-        </form>
-    </div>
-</div>
-
-
-<!-- hero section -->
-
-<!-- Video -->
-
-<!-- 1. tekst boks -->
-
-<!-- Statestik -->
-
-<!-- 2. tekst boks -->
-
-<!-- GIF -->
-
-<!-- 3. tekst boks -->
-
-<!-- donations boks -->
-
- </body> 
+		<Nav />
+		<Hero />
+        <video src="https://anarikkelarsen.dk/kea/09_indhold_II/storopl%C3%B8sning_kidsaid_video.mp4" controls></video>
+	</body> 
 </html>
+
+<style>
+    :root {
+        --main-font: 'Montserrat', sans-serif;
+    }
+
+    /* Desktop */
+      body {
+        font-family: var(--main-font);
+    }
+
+    h1 {
+        font-weight: 700; 
+        font-size: 2rem; 
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    video{
+        margin-top: 200px;
+        max-width: 100%;
+    }
+
+    /* Mobil */
+</style>

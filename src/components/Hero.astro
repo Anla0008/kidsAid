@@ -1,0 +1,47 @@
+---
+import DonerKnap from "./DonerKnap.astro";
+---
+<section class="hero">
+<div class="hero_indhold">
+<img class="logo" src="/public/gallery/logo.svg" alt="logo">
+<p>Vi laver Unikke Oplevelser på hospitalerne for de syge, deres søskende og deres forældre, så de husker at grine og have det sjovt – sammen. </p>
+<DonerKnap/>
+</div>
+    <img class="hero_billede" src="/public/gallery/faellesbillede.svg" alt="hero_billede">
+</section>
+
+<style>
+.hero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding: 20px;
+        background-color: #C9E4FF; 
+}
+
+.hero_indhold {
+    grid-column: span 2; 
+        flex-direction: column;
+    align-items: flex-start; /* Justerer indhold til venstre */
+    padding: 20px;
+    gap: 20px; /* Afstand mellem elementer */
+    justify-self: center;
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 50px;
+    margin-left: -30px;
+}
+
+.hero_billede {
+    grid-column: span 2;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+p{
+    max-width: 50ch;    
+}
+
+</style>
