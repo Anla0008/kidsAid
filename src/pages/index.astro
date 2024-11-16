@@ -2,9 +2,10 @@
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import GulTekstboks from "../components/GulTekstboks.astro";
-import CountUp from "../components/CountUp.astro"
+import CountUp from "../components/CountUp.astro";
 import GroenTekstboks from "../components/GroenTekstboks.astro";
-import BlaaTekstboks from "../components/BlaaTekstboks.astro"
+import BlaaTekstboks from "../components/BlaaTekstboks.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -28,15 +29,22 @@ import BlaaTekstboks from "../components/BlaaTekstboks.astro"
 <img class="gif" src="https://anarikkelarsen.dk/kea/09_indhold_II/GIF3.0_crop.gif" alt="Beskrivelse af GIF" />
 </div> 
 <BlaaTekstboks/>
+<Footer/>
 </body> 
 </html>
 
 <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     :root {
         --main-font: 'Montserrat', sans-serif;
     }
     body{
-        background-color: #D9D9D9 40%;
+        background-color: #FDFDFD;
     }
 
     /* Desktop */
@@ -75,8 +83,17 @@ import BlaaTekstboks from "../components/BlaaTekstboks.astro"
     font-size: 4rem;
 }
 
-
-
     /* Mobil */
 
 </style>
+
+<script>
+    window.addEventListener("scroll", onScroll);
+
+    function onScroll(){
+        let winScroll = document.body.scrollTop | |  document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement;
+        let scrolled = (winScroll/height)* 100;
+        document.getElementById("progressBar").style.width = scrolled + "%";
+    }
+</script>
