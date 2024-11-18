@@ -1,134 +1,114 @@
 ---
 
 ---
-    <div class="box1">
         <div class="gul_boks">
-            <div class="overlap-group">
+                <img class="image" src="/public/gallery/tryllekunstner.svg" alt="mand">
                 <img class="yellowblob" src="/public/gallery/yellowblob.svg" alt="Gul blob">
-                <img class="image" src="/public/gallery/chrisser.svg" alt="Chrisser">
-                <p class="endnu-en-gang-tak">
-                    ”Endnu en gang tak for en fantastisk oplevelse. Det er så fedt at opleve det hele samt møde de
-                    forskellige
-                    familier igen til et KidsAid arrangement. Nu er vi mætte, friske, glade og klar til turen hjem til
-                    Fyn fra Frederikshavn. Frederikke, Mads og Mathias siger tak til jer alle i KidsAid
-                    Danmark.”<br><br>
-                    Tina Knudsen, mor til Mathias med bl.a. leddegigt og epilepsi efter.
+                <div class="tekst_indhold">
+                <p>
+                   KidsAid Tryllerne er at finde over hele det danske land. De gør et kæmpe stykke arbejde for at hjælpe børn i alderen 0-20år igennem deres hospitalsophold. Om det er at holde dem i hånden under en blodprøve eller berolige og opmuntre dem inden en operation. Deres fineste opgave er at sørge for at børnene og deres familier får et lille afbræk fra den hverdag de har og få bare et øjeblik af magi at føle.<br><br>"For mig er det ikke bare trylleri – det er en mulighed for at skabe håb og glæde, når de har mest brug for det." - KidsAid tryller
                 </p>
                 <div class="text-wrapper">“</div>
-            </div>
+                </div>
         </div>
-    </div>
 
 <style>
-    /**** Desktop *****/
-    .box1 {
-        width: 1295px;
-        height: 763px;
-        margin-top: 200px;
-    }
 
-    .box1 .ny-gul-boks {
-        position: fixed;
-        width: 1299px;
-        height: 763px;
-        top: 0;
-        left: 0;
-    }
+        /**** Mobil *****/
+ @media (max-width: 768px) {
+.gul_boks {
+   position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
 
-    .box1 .overlap-group {
-        position: relative;
-        width: 1295px;
-        height: 763px;
-    }
+/* Image of the person */
+.image {
+max-width: 100%;
+height: auto;
+z-index: -1;
+}
 
-    .box1 .image {
-        position: absolute;
-        width: 578px;
-        height: 515px;
-        top: 53px;
-        left: 0;
-    }
+/* Yellow blob */
+.yellowblob {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+max-width: 110%;
+height: auto;
+margin-top: 200px;
+}
 
-    .box1 .yellowblob {
-        position: absolute;
-        width: 865px;
-        height: 763px;
-        top: 0;
-        left: 430px;
-        object-fit: cover;
-    }
+.tekst_indhold{
+    position: relative;
+    text-align: left;
+    max-width: 30ch;
+    margin-left: 80px;
+}
 
-    .box1 .endnu-en-gang-tak {
-        position: absolute;
-        width: 580px;
-        top: 185px;
-        left: 621px;
-        font-size: 24px;
-        letter-spacing: 0;
-        line-height: normal;
-    }
+.text-wrapper{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+margin-top: 1rem;
+width: fit-content;
+margin: 0 auto;
+}
+}
 
-    .box1 .text-wrapper {
-        position: absolute;
-        width: 84px;
-        top: 517px;
-        left: 837px;
-        letter-spacing: 0;
-        line-height: normal;
-        white-space: nowrap;
-        font-size: 8rem;
-    }
+@media (min-width: 769px) {
+  .gul_boks {
+    position: relative;
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 0.5rem; 
+    text-align: left; 
+  }
 
-    /**** Mobil *****/
-    @media (max-width: 768px) {
-        .box1 {
-            width: 100%;
-            height: auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+  /* Image of the person */
+  .image {
+    flex: 0 0 40%; 
+    max-width: 100%;
+    height: auto;
+    margin-right: 0; 
+  }
 
-        .box1 .overlap-group {
-            width: 100%;
-            height: auto;
-        }
+  /* Yellow blob */
+  .yellowblob {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-30%, -50%);
+    max-width: 100%;
+    height: auto;
+    z-index: -1; 
+  }
 
-        .box1 .image {
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            position: relative;
-        }
+  /* Text content */
+  .tekst_indhold {
+    flex: 0 0 50%; 
+    max-width: 60ch; 
+    margin-left: 20px; 
+    padding-left: 0; 
+  }
 
-        .box1 .yellowblob {
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            position: relative;
-            object-fit: contain;
-            margin-top: 20px;
-        }
+ .text-wrapper {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem auto; 
+    width: fit-content;
+    text-align: center; 
+}
 
-        .box1 .endnu-en-gang-tak {
-            width: 100%;
-            position: relative;
-            top: 0;
-            left: 0;
-            font-size: 18px;
-            margin-top: 20px;
-            text-align: center;
-        }
+}
 
-        .box1 .text-wrapper {
-            width: auto;
-            position: relative;
-            top: 0;
-            left: 0;
-            font-size: 80px;
-            text-align: center;
-            margin: 10px auto;
-        }
-    }
 </style>

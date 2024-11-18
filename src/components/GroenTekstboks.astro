@@ -1,131 +1,120 @@
 ---
 
 ---
-    <div class="box2">
         <div class="groen_boks">
-            <div class="overlap-group">
-                <img class="greenblob" src="/public/gallery/greenblob.svg" alt="Grøn blob">
-                <img class="image" src="/public/gallery/groenbillede.svg" alt="Grønt billede">
-                <p class="groenTekst">
-                        ”Det var en fantastisk oplevelse for hele familien at komme til LEGOLand med overnatning. Gry var slet ikke til at styre. Hun sagde flere gange til os, at det var den bedste dag i hendes liv. Gry og hendes lillebror Niels snakker stadig om turen til LEGOLand og vil meget gerne snart afsted igen.”
-                        <br><br>
-                        Mette Sørensen, mor til Gry med leukæmi
+                <img class="image" src="/public/gallery/groenbillede.svg" alt="mand">
+                <img class="greenblob" src="/public/gallery/greenblob.svg" alt="Gul blob">
+                <div class="tekst_indhold">
+                <p>
+                   “Som ansvarlige for donationer i [Virksomhed] er det mig en ære at kunne sige, at vi har været med til at bidrage i den gode sags tjeneste.
+Da jeg hørte om KidsAid Tryllerne var jeg ikke et sekund i tvivl om, at det var et koncept vores virksomhed skulle støtte op om. Børnene på hospitalerne fortjene hver og en al den støtte og omsorg de overhovedet kan få”<br><br>
+                   – Donationsansvarlig, [Virksomhed]
                 </p>
                 <div class="text-wrapper">“</div>
-            </div>
+                </div>
         </div>
-    </div>
 
 <style>
-    /**** Desktop *****/
-    .box2 {
-        width: 1295px;
-        height: 763px;
-        margin-top: 200px;
-    }
 
-    .box2 .groen-boks {
-        position: fixed;
-        width: 1299px;
-        height: 763px;
-        top: 0;
-        left: 0;
-    }
+        /**** Mobil *****/
+ @media (max-width: 768px) {
+.groen_boks {
+   position: relative;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
 
-    .box2 .overlap-group {
-        position: relative;
-        width: 1295px;
-        height: 763px;
-    }
+/* Image of the person */
+.image {
+max-width: 100%;
+height: auto;
+z-index: -1;
+}
 
-    .box2 .image {
-        position: absolute;
-        width: 578px;
-        height: 515px;
-        top: 53px;
-        left: 0;
-    }
+/* Yellow blob */
+.greenblob {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+max-width: 110%;
+height: auto;
+margin-top: 200px;
+}
 
-    .box2 .greenblob {
-        position: absolute;
-        width: 865px;
-        height: 763px;
-        top: 0;
-        left: 430px;
-        object-fit: cover;
-    }
+.tekst_indhold{
+    position: relative;
+    transform: translateY(-30px);
+    text-align: left;
+    max-width: 30ch;
+    margin-left: 80px;
+}
 
-    .box2 .groenTekst {
-        position: absolute;
-        width: 580px;
-        top: 185px;
-        left: 621px;
-        font-size: 24px;
-        letter-spacing: 0;
-        line-height: normal;
-    }
+.text-wrapper{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+margin-top: 1rem;
+width: fit-content;
+margin: 0 auto;
+}
+}
 
-    .box2 .text-wrapper {
-        position: absolute;
-        width: 84px;
-        top: 517px;
-        left: 837px;
-        letter-spacing: 0;
-        line-height: normal;
-        white-space: nowrap;
-        font-size: 8rem;
-    }
+/****** Desktop ******/
+@media (min-width: 769px) {
+  .groen_boks {
+    position: relative;
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 0.5rem; 
+    text-align: left; 
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
 
-    /**** Mobil *****/
-    @media (max-width: 768px) {
-        .box2 {
-            width: 100%;
-            height: auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+  /* Image of the person */
+  .image {
+    flex: 0 0 40%; 
+    max-width: 100%;
+    height: auto;
+    margin-right: 0; 
+  }
 
-        .box2 .overlap-group {
-            width: 100%;
-            height: auto;
-        }
+  /* Yellow blob */
+  .greenblob {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-30%, -50%);
+    max-width: 100%;
+    height: auto;
+    z-index: -1; 
+  }
 
-        .box2 .image {
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            position: relative;
-        }
+  /* Text content */
+  .tekst_indhold {
+    flex: 0 0 50%; 
+    max-width: 50ch; 
+    margin-left: 20px; 
+    padding-left: 0; 
+  }
 
-        .box2 .greenblob {
-            width: 100%;
-            height: auto;
-            top: 0;
-            left: 0;
-            position: relative;
-            object-fit: contain;
-            margin-top: 20px;
-        }
+ .text-wrapper {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem auto; 
+    width: fit-content;
+    text-align: center; 
+}
 
-        .box2 .groenTekst {
-            width: 100%;
-            position: relative;
-            top: 0;
-            left: 0;
-            font-size: 18px;
-            margin-top: 20px;
-            text-align: center;
-        }
+}
 
-        .box2 .text-wrapper {
-            width: auto;
-            position: relative;
-            top: 0;
-            left: 0;
-            font-size: 80px;
-            text-align: center;
-            margin: 10px auto;
-        }
-    }
 </style>

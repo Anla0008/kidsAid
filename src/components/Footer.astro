@@ -1,105 +1,138 @@
 ---
 
 ---
-
-<div class="footer">
-    <img class="logo_footer" src="https://kidsaid.dk/wp-content/uploads/2020/12/KidsAid_Logo_Negative.png" alt="KidsAid Logo" class="logo">
-
-    <div class="omOs">
-<h4>Om os</h4>
-    <p><a href="https://kidsaid.dk/nyheder/">Nyheder</a></p>
-    <p><a href="https://kidsaid.dk/ambassadoerer/">KidsAid Ambassadører</a></p>
-    <p><a href="https://kidsaid.dk/om-kidsaid/organisationen/">KidsAid Organisation</a></p>
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Logo -->
+    <div class="footer-logo">
+<img class="footer-logo" src="public/gallery/kidsaidblack 1.svg" alt="KidsAid Logo">
     </div>
 
-    <div class="kontaktInfo">
-        <h4>Kontakt information</h4>
-            <p>Emma Iben Rosenkrantz Holm:<br>
-      <a href="mailto:eb@kidsaid.dk">Eb@kidsaid.dk</a><br>
-      Tlf.: +45 2025 1987
-    </p>
+    <!-- Links Section -->
+    <div class="footer-links">
+      <h3>Om os</h3>
+      <ul>
+        <li>Nyheder</li>
+        <li>KidsAid Tryllerne</li>
+        <li>Ambassadørerne</li>
+        <li>KidsAid Organisationen</li>
+      </ul>
     </div>
 
-    <div class="socialeMedier">
-              <a href="https://www.instagram.com/kidsaiddk/" target="_blank" aria-label="Instagram">
-        <img src="https://kidsaid.dk/wp-content/uploads/2022/04/KidsAid__0002_instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/KidsAidDanmark/" target="_blank" aria-label="Facebook">
-        <img src="https://kidsaid.dk/wp-content/uploads/2022/04/KidsAid__0001_facebook.png" alt="Facebook">
-      </a>
-      <a href="https://www.linkedin.com/company/kidsaiddanmark/" target="_blank" aria-label="LinkedIn">
-        <img src="https://kidsaid.dk/wp-content/uploads/2022/04/KidsAid__0000_linkedin.png" alt="LinkedIn">
-      </a>
+    <!-- Contact Section -->
+    <div class="footer-contact">
+      <h3>Kontakt os</h3>
+      <p>Emma Iben Rosenkrantz Holm</p>
+      <a href="mailto:Eb@KidsaidTryllerne.dk">Eb@KidsaidTryllerne.dk</a>
+      <p>Telefon: +45 2025 1987</p>
     </div>
 
-  <div class="regnskab">
-    <h4>Regnskaber</h4>
-    <p><a href="https://kidsaid.dk/wp-content/uploads/2023/06/Overskudserklaering-underskrevet.pdf">Overskudserklæring 2021</a></p>
-    <p><a href="https://kidsaid.dk/wp-content/uploads/2023/04/KidsAid-Ledelsesberetning-2022.pdf">Ledelsesberetning 2022</a></p>
-    <p><a href="https://kidsaid.dk/wp-content/uploads/2024/08/Indsamlingsregnskab-signed.pdf" target="_blank">Indsamlingsregnskab 2023</a></p>
-    <p><a href="https://kidsaid.dk/wp-content/uploads/2023/04/KidsAid-Årsrapport-2022.pdf" target="_blank">Årsrapport 2022</a></p>
+    <!-- Financial Section -->
+    <div class="footer-financial">
+      <h3>Regnskaber</h3>
+      <ul>
+        <li><a href="#">Overskudsikæring 2021</a></li>
+        <li><a href="#">Ledelsesberetning 2022</a></li>
+        <li><a href="#">Indsamlingsregnskab 2023</a></li>
+        <li><a href="#">Årsrapport 2022</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-social">
+      <p>Følg os på vores sociale medier</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/KidsAidDanmark/"><img src="public/gallery/facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/kidsaiddk/"><img src="public/gallery/insta.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/company/kidsaiddanmark/?originalSubdomain=dk"><img src="public/gallery/linked.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
   </div>
-</div>
+</footer>
+
 
 
 <style>
 
 .footer {
-  max-width: 1248px;
+  background-color: #C9E4FF; 
+  padding: 2rem;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.footer-content {
+  max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2%;
-  padding: 20px;
-  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-
-/* Logo Styling */
-.logo_footer {
-  max-width: 220px;
+.footer-logo img {
+  max-width: 150px;
+  margin: 0 auto;
 }
 
-/* Section Headings */
-h4 {
-  font-family: Montserrat, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: pink;
-  margin: 10px 0;
+.footer-links ul,
+.footer-financial ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Links */
-p a {
-  color: pink;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: block;
-  margin: 5px 0;
+.footer-links li,
+.footer-financial li {
+  margin: 0.5rem 0;
 }
 
-/* Social Links */
-.social-links img {
-  width: 40px;
-  margin: 0 10px;
-  aspect-ratio: 1 / 1;
+.footer-contact p,
+.footer-contact a {
+  margin: 0.5rem 0;
+  color: #333;
+  text-decoration: none;
 }
 
-/* Responsive Styling */
-@media (max-width: 1024px) {
-  .column {
-    flex: 1 1 100%;
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social .social-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-social img {
+  max-width: 40px;
+  height: auto;
+}
+/****** Desktop *****/
+@media screen and (min-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr); 
+    text-align: left; 
+  }
+
+  .footer-logo {
+    grid-column: span 1; 
+    text-align: center; 
+  }
+
+  .footer-links {
+    grid-column: span 1; 
+  }
+
+  .footer-contact {
+    grid-column: span 1; 
+  }
+
+  .footer-social {
+    grid-column: span 4; 
+    text-align: right; 
   }
 }
 
-@media (max-width: 640px) {
-  .social-links img {
-    margin-bottom: 15px;
-  }
-}
 
 </style>

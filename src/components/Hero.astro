@@ -2,46 +2,111 @@
 import DonerKnap from "./DonerKnap.astro";
 ---
 <section class="hero">
-<div class="hero_indhold">
-<img class="logo" src="/public/gallery/logo.svg" alt="logo">
-<p>Vi laver Unikke Oplevelser på hospitalerne for de syge, deres søskende og deres forældre, så de husker at grine og have det sjovt – sammen. </p>
-<DonerKnap/>
-</div>
-    <img class="hero_billede" src="/public/gallery/faellesbillede.svg" alt="hero_billede">
+    <div class="logo-container">
+        <img class="logo" src="/public/gallery/logo.svg" alt="logo">
+    </div>
+    <div class="image-container">
+        <img class="hero_billede" src="/public/gallery/faellesbillede.svg" alt="hero_billede">
+    </div>
+    <div class="text-container">
+        <p>Vi skaber unikke og mindeværdige oplevelser på hospitalerne for syge børn, deres søskende og deres forældre. Vores mål er at give dem et tiltrængt pusterum fra den ofte svære hverdag, hvor sygdom kan fylde meget. Vi ønsker at bringe glæde, smil og latter ind i deres liv og skabe øjeblikke, hvor hele familien kan være sammen og nyde hinandens selskab på en sjov og meningsfuld måde. Gennem vores aktiviteter og oplevelser arbejder vi for at give familierne minder, de kan se tilbage på med varme, og hjælpe dem med at finde små stunder af lys i en udfordrende tid.</p>
+    </div>
+    <div class="button-container">
+        <DonerKnap />
+    </div>
 </section>
 
+
+
 <style>
-.hero {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    padding: 20px;
-        background-color: #C9E4FF; 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
 }
 
-.hero_indhold {
-    grid-column: span 2; 
-        flex-direction: column;
-    align-items: flex-start; /* Justerer indhold til venstre */
-    padding: 20px;
-    gap: 20px; /* Afstand mellem elementer */
-    justify-self: center;
+.hero {
+    display: grid;
+    grid-template-columns: 1fr; 
+    background-color: #C9E4FF;
+    gap: 20px;
+    text-align: center;
+}
+
+/****** Mobil layout ******/
+.logo-container,
+.image-container,
+.text-container,
+.button-container {
+    grid-column: 1; 
 }
 
 .logo {
     width: 250px;
-    margin-bottom: 50px;
-    margin-left: -30px;
+    margin: 0 auto;
 }
 
 .hero_billede {
-    grid-column: span 2;
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-p{
-    max-width: 50ch;    
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.button-container {
+    text-align: center;
+    
+}
+
+/****** Desktop ******/
+@media (min-width: 769px) {
+    .hero {
+        grid-template-columns: 1fr 1fr; 
+        align-items: center; 
+        text-align: left;
+    }
+
+    .logo-container,
+    .text-container,
+    .button-container {
+        grid-column: 1; 
+    }
+
+    .image-container {
+        grid-column: 2; 
+    margin-top: 50px;
+    }
+
+   .logo {
+    width: 200px;
+    margin: 0;
+    position: relative;
+    top: -250px;
+    margin-left:48px;
+}
+
+    .text-container p {
+        max-width: 50ch;
+            position: relative;
+    top: -520px;
+    }
+    .button-container {
+        text-align: left; 
+    margin-top: -850px;
+    }
+
+    .hero_billede {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 </style>

@@ -5,19 +5,28 @@
 <section style="text-align: center; padding: 2rem;">
   <h1>Så mange børn har vi givet unikke oplevelser i år</h1>
   <div id="helped" data-target="20000" class="count-up">0</div>
+  <img src="public/gallery/kidwithbaloon.svg" alt="">
 </section>
 
 <style>
     h1{
-        font-size: 5rem;
+        font-size: 3rem;
         margin-top: 200px;
     }
+
+    img {
+    display: block; 
+    margin: 0 auto; 
+    width: 50%; 
+}
+
  .count-up {
     font-size: 6rem; 
     font-weight: bold;
     color: #FE5802; /* Skift farven på tallet */
     margin-top: 1rem;
     animation: pop 0.3s ease-out; /* Animation når tallet tæller op */
+    margin-bottom: 50px;
   }
 
   @keyframes pop {
@@ -34,25 +43,42 @@
 </style>
 
 <script>
-  function countUp(element, target) {
-    let start = 0;
-    const duration = 5000; // Varighed af animationen i millisekunder
-    const increment = 70; // Tæller op med 20 ad gangen
+function countUp(element, target) {
+  let start = 0;
+  const duration = 5000; // Varighed af animationen i millisekunder
+  const increment = Math.ceil(target / (duration / 16)); // Opdater tallet ved ca. 60 FPS
 
-    function updateCount() {
-      start += increment;
-      if (start >= target) {
-        element.innerText = target.toLocaleString(); // Stop ved det endelige mål
-      } else {
-        element.innerText = start.toLocaleString();
-        requestAnimationFrame(updateCount);
-      }
+  function updateCount() {
+    start += increment;
+    if (start >= target) {
+      element.innerText = target.toLocaleString(); // Stop ved det endelige mål
+    } else {
+      element.innerText = start.toLocaleString();
+      requestAnimationFrame(updateCount);
     }
-    updateCount();
   }
 
-  window.addEventListener('load', () => {
-    const helpedElement = document.getElementById('helped');
-    countUp(helpedElement, parseInt(helpedElement.getAttribute('data-target')));
-  });
+  updateCount();
+}
+
+// Observer for at starte animationen, når sektionen er synlig
+document.addEventListener('DOMContentLoaded', () => {
+  const helpedElement = document.getElementById('helped');
+  const target = parseInt(helpedElement.getAttribute('data-target'));
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          countUp(helpedElement, target); // Start tælling
+          observer.unobserve(helpedElement); // Stop observering efter start
+        }
+      });
+    },
+    { threshold: 0.5 } // 50% af sektionen skal være synlig
+  );
+
+  observer.observe(helpedElement);
+});
+
 </script>
