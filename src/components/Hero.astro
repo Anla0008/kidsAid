@@ -42,7 +42,7 @@ import DonerKnap from "./DonerKnap.astro";
   }
   .logo-container,
   .logo {
-    width: 250px;
+    width: 190px;
     margin: 0 auto;
   }
 
@@ -53,10 +53,11 @@ import DonerKnap from "./DonerKnap.astro";
   }
 
   .text-container p {
-    font-size: 1rem;
+    font-size: 15px;
     line-height: 1.4;
-    margin: 25px;
-    max-width: 40ch;
+    max-width: 40ch; /* Begrænser tekstbredden for bedre læsbarhed */
+    text-align: left; /* Holder teksten venstrejusteret */
+    margin: 24px; /* Centrerer hele blokken horisontalt */
   }
 
   .button-container {
@@ -83,10 +84,11 @@ import DonerKnap from "./DonerKnap.astro";
     }
 
     .logo {
-      margin: 0;
+      width: 250px;
+      height: auto;
       position: relative;
       top: -150px;
-      margin-left: -80px;
+      left: -105px;
     }
 
     .text-container p {
