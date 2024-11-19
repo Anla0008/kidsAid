@@ -16,6 +16,21 @@
 </div>
 
 <style>
+  .blaa_boks {
+    transform: scale(0.8);
+    opacity: 0;
+    transition:
+      transform 0.6s ease,
+      opacity 0.6s ease;
+  }
+
+  @keyframes fade-in {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
   /**** Mobil *****/
   @media (max-width: 768px) {
     .blaa_boks {
@@ -116,3 +131,29 @@
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target as HTMLElement; // Cast til HTMLElement for at få adgang til style
+          if (entry.isIntersecting) {
+            // Zoom ind, når elementet er synligt
+            target.style.transform = "scale(1)";
+            target.style.opacity = "1";
+          } else {
+            // Zoom ud, når elementet forlader viewporten
+            target.style.transform = "scale(0.8)";
+            target.style.opacity = "0";
+          }
+        });
+      },
+      { threshold: 0.5 } // Elementet skal være mindst 50% synligt
+    );
+
+    // Find alle elementer med klassen 'blaa_boks'
+    const elements = document.querySelectorAll(".blaa_boks");
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
