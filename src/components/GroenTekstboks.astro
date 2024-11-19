@@ -35,30 +35,32 @@
     }
 
     /* Yellow blob */
-    .greenblob {
-      position: absolute;
-      bottom: 0;
-      left: 47.5%;
-      transform: translateX(-50%) scaleX(1.1);
-      max-width: 110%;
-      height: auto;
-    }
-
     .tekst_indhold {
-      position: relative;
-      transform: translateY(-5px) translateX(-30px);
-      text-align: left;
-      max-width: 65ch;
-      margin-left: 70px;
-      font-size: 14px;
+      position: relative; /* Juster i forhold til dens normale placering */
+      transform: translateY(-50px) translateX(-30px); /* Flytter teksten op og til venstre */
+      text-align: left; /* Holder teksten venstrejusteret */
+      max-width: 65ch; /* Begrænser bredden for bedre læsbarhed */
+      margin-left: 70px; /* Tilføjer afstand fra venstre */
+      font-size: 13px; /* Tilpas tekststørrelse */
+      z-index: 1; /* Sørger for, at teksten er foran blobben */
     }
 
     .text-wrapper {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #333;
-      width: fit-content;
-      margin: 0 auto;
+      font-size: 3rem; /* Stor skriftstørrelse for overskriften */
+      font-weight: bold; /* Gør teksten fed */
+      color: #333; /* Mørkegrå farve */
+      width: fit-content; /* Gør bredden kun så stor som indholdet */
+      margin: 0 auto; /* Centrerer teksten horisontalt */
+    }
+
+    .greenblob {
+      position: absolute; /* Gør blobben absolut placeret */
+      bottom: -20px; /* Flytter blobben længere ned */
+      left: 47.5%; /* Centrerer blobben horisontalt */
+      transform: translateX(-50%) scaleX(1.1); /* Centrerer og strækker blobben lidt */
+      max-width: 110%; /* Lader blobben fylde mere end sin container */
+      height: auto; /* Bevarer proportionerne */
+      z-index: 0; /* Sørger for, at blobben er bag teksten */
     }
   }
 
