@@ -4,26 +4,29 @@
 
 <section style="text-align: center; padding: 2rem;">
   <h1>Så mange børn har vi givet unikke oplevelser i år</h1>
-  <div id="helped" data-target="20000" class="count-up">0</div>
-  <img src="public/gallery/kidwithbaloon.svg" alt="">
+  <div class="grid1">
+    <div id="helped" data-target="20000" class="count-up">0</div>
+    <img src="public/gallery/kidwithbaloon.svg" alt="" />
+  </div>
 </section>
 
 <style>
-    h1{
-        font-size: 3rem;
-        margin-top: 200px;
-    }
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 200px;
+  }
 
-    img {
-    display: block; 
-    margin: 0 auto; 
-    width: 50%; 
-}
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 55px;
+  }
 
- .count-up {
-    font-size: 6rem; 
+  .count-up {
+    font-size: 6rem;
     font-weight: bold;
-    color: #FE5802; /* Skift farven på tallet */
+    color: #fe5802; /* Skift farven på tallet */
     margin-top: 1rem;
     animation: pop 0.3s ease-out; /* Animation når tallet tæller op */
     margin-bottom: 50px;
@@ -40,45 +43,68 @@
       transform: scale(1);
     }
   }
+
+  /******Desktop ******/
+  @media (min-width: 768px) {
+    .grid1 {
+      grid-template-columns: 1fr 1fr;
+      display: grid;
+    }
+    #helped {
+      grid-column: 1;
+    }
+    img {
+      grid-column: 2;
+      max-width: 80%;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    .count-up {
+      margin-top: 150px;
+      font-size: 8rem;
+    }
+  }
 </style>
 
 <script>
-function countUp(element, target) {
-  let start = 0;
-  const duration = 5000; // Varighed af animationen i millisekunder
-  const increment = Math.ceil(target / (duration / 16)); // Opdater tallet ved ca. 60 FPS
+  function countUp(element, target) {
+    let start = 0;
+    const duration = 5000; // Varighed af animationen i millisekunder
+    const increment = Math.ceil(target / (duration / 16)); // Opdater tallet ved ca. 60 FPS
 
-  function updateCount() {
-    start += increment;
-    if (start >= target) {
-      element.innerText = target.toLocaleString(); // Stop ved det endelige mål
-    } else {
-      element.innerText = start.toLocaleString();
-      requestAnimationFrame(updateCount);
+    function updateCount() {
+      start += increment;
+      if (start >= target) {
+        element.innerText = target.toLocaleString(); // Stop ved det endelige mål
+      } else {
+        element.innerText = start.toLocaleString();
+        requestAnimationFrame(updateCount);
+      }
     }
+
+    updateCount();
   }
 
-  updateCount();
-}
+  // Observer for at starte animationen, når sektionen er synlig
+  document.addEventListener("DOMContentLoaded", () => {
+    const helpedElement = document.getElementById("helped");
+    const target = parseInt(helpedElement.getAttribute("data-target"));
 
-// Observer for at starte animationen, når sektionen er synlig
-document.addEventListener('DOMContentLoaded', () => {
-  const helpedElement = document.getElementById('helped');
-  const target = parseInt(helpedElement.getAttribute('data-target'));
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            countUp(helpedElement, target); // Start tælling
+            observer.unobserve(helpedElement); // Stop observering efter start
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% af sektionen skal være synlig
+    );
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          countUp(helpedElement, target); // Start tælling
-          observer.unobserve(helpedElement); // Stop observering efter start
-        }
-      });
-    },
-    { threshold: 0.5 } // 50% af sektionen skal være synlig
-  );
-
-  observer.observe(helpedElement);
-});
-
+    observer.observe(helpedElement);
+  });
 </script>

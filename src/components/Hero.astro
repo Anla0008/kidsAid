@@ -1,112 +1,112 @@
 ---
 import DonerKnap from "./DonerKnap.astro";
 ---
+
 <section class="hero">
-    <div class="logo-container">
-        <img class="logo" src="/public/gallery/logo.svg" alt="logo">
-    </div>
-    <div class="image-container">
-        <img class="hero_billede" src="/public/gallery/faellesbillede.svg" alt="hero_billede">
-    </div>
-    <div class="text-container">
-        <p>Vi skaber unikke og mindeværdige oplevelser på hospitalerne for syge børn, deres søskende og deres forældre. Vores mål er at give dem et tiltrængt pusterum fra den ofte svære hverdag, hvor sygdom kan fylde meget. Vi ønsker at bringe glæde, smil og latter ind i deres liv og skabe øjeblikke, hvor hele familien kan være sammen og nyde hinandens selskab på en sjov og meningsfuld måde. Gennem vores aktiviteter og oplevelser arbejder vi for at give familierne minder, de kan se tilbage på med varme, og hjælpe dem med at finde små stunder af lys i en udfordrende tid.</p>
-    </div>
-    <div class="button-container">
-        <DonerKnap />
-    </div>
+  <div class="logo-container">
+    <img class="logo" src="./gallery/logo.svg" alt="logo" />
+  </div>
+  <div class="image-container">
+    <img class="hero_billede" src="./gallery/nyt.svg" alt="hero_billede" />
+  </div>
+  <div class="text-container">
+    <p>Vi laver Unikke Oplevelser på og udenfor hospitalerne for de syge, deres søskende og deres forældre, så de husker at grine og have det sjovt – sammen.</p>
+  </div>
+  <div class="button-container">
+    <DonerKnap />
+  </div>
 </section>
 
-
-
 <style>
-html, body {
+  html,
+  body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; 
-}
+    overflow-x: hidden;
+  }
 
-.hero {
+  .hero {
     display: grid;
-    grid-template-columns: 1fr; 
-    background-color: #C9E4FF;
+    grid-template-columns: 1fr;
+    background-color: #c9e4ff;
     gap: 20px;
-    text-align: center;
-}
+  }
 
-/****** Mobil layout ******/
-.logo-container,
-.image-container,
-.text-container,
-.button-container {
-    grid-column: 1; 
-}
-
-.logo {
+  /****** Mobil layout ******/
+  .logo-container,
+  .image-container,
+  .text-container,
+  .button-container {
+    grid-column: 1;
+  }
+  .logo-container,
+  .logo {
     width: 250px;
     margin: 0 auto;
-}
+  }
 
-.hero_billede {
+  .hero_billede {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+  }
 
-.text-container p {
+  .text-container p {
     font-size: 1rem;
     line-height: 1.4;
-    margin: 0 auto;
-    padding: 0 10px;
-}
+    margin: 25px;
+    max-width: 40ch;
+  }
 
-.button-container {
+  .button-container {
     text-align: center;
-    
-}
+  }
 
-/****** Desktop ******/
-@media (min-width: 769px) {
+  /****** Desktop ******/
+  @media (min-width: 769px) {
     .hero {
-        grid-template-columns: 1fr 1fr; 
-        align-items: center; 
-        text-align: left;
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center;
+      text-align: left;
     }
 
     .logo-container,
     .text-container,
     .button-container {
-        grid-column: 1; 
+      grid-column: 1;
     }
 
     .image-container {
-        grid-column: 2; 
-    margin-top: 50px;
+      grid-column: 2;
+      margin-top: 50px;
     }
 
-   .logo {
-    width: 200px;
-    margin: 0;
-    position: relative;
-    top: -250px;
-    margin-left:48px;
-}
+    .logo {
+      margin: 0;
+      position: relative;
+      top: -150px;
+      margin-left: -80px;
+    }
 
     .text-container p {
-        max-width: 50ch;
-            position: relative;
-    top: -520px;
+      max-width: 50ch;
+      position: relative;
+      top: -400px;
+      margin-left: 95px;
     }
     .button-container {
-        text-align: left; 
-    margin-top: -850px;
+      text-align: left;
+      margin-top: -600px;
+      margin-left: 70px;
     }
 
     .hero_billede {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-left: auto;
+      display: block;
     }
-}
-
+  }
 </style>

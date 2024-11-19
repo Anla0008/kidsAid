@@ -1,120 +1,118 @@
 ---
 
 ---
-        <div class="blaa_boks">
-                <img class="image" src="/public/gallery/trylledame.svg" alt="mand">
-                <img class="blueblob" src="/public/gallery/blueblob.svg" alt="Gul blob">
-                <div class="tekst_indhold">
-                <p>
-                  ”Tusind tak til KidsAid tryllerne for at have beroliget og opmuntret min datter inden hendes første operation. Som mor er det utrolig hjerteskærende at se sin datter have så meget frygt og angst i øjnene, men lige så snart (trylekunstner) trådte ind af døren med sine bamser og en hjerteballon i hånden var det som om hun et øjeblik glemte virkligheden, og efterfølgende var så modig både før og efter operationen”
-                  <br><br>
-                    – Mor til datter på hospitalet
-                </p>
-                <div class="text-wrapper">“</div>
-                </div>
-        </div>
+
+<div class="blaa_boks">
+  <img class="image" src="./gallery/trylledame.svg" alt="mand" />
+  <img class="blueblob" src="./gallery/blueblob.svg" alt="Gul blob" />
+  <div class="tekst_indhold">
+    <p>
+      ”Tusind tak til KidsAid tryllerne for at have beroliget og opmuntret min datter inden hendes første operation. Som mor er det utrolig hjerteskærende at se sin datter have så meget frygt og angst i øjnene, men lige så snart (trylekunstner) trådte ind af døren med sine bamser og en hjerteballon i hånden var det som om hun et øjeblik glemte virkligheden, og efterfølgende var så modig både før og efter operationen”
+      <br /><br />
+      – Mor til datter på hospitalet
+    </p>
+    <div class="text-wrapper">“</div>
+  </div>
+</div>
 
 <style>
+  /**** Mobil *****/
+  @media (max-width: 768px) {
+    .blaa_boks {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 100px;
+    }
 
-        /**** Mobil *****/
- @media (max-width: 768px) {
-.blaa_boks {
-   position: relative;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 100px;
-}
+    /* Image of the person */
+    .image {
+      max-width: 100%;
+      height: auto;
+      z-index: -1;
+    }
 
-/* Image of the person */
-.image {
-max-width: 100%;
-height: auto;
-z-index: -1;
-}
+    /* Yellow blob */
+    .blueblob {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 110%;
+      height: auto;
+      margin-top: 200px;
+    }
 
-/* Yellow blob */
-.blueblob {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-max-width: 110%;
-height: auto;
-margin-top: 200px;
-}
+    .tekst_indhold {
+      position: relative;
+      transform: translateY(-30px);
+      text-align: left;
+      max-width: 60ch;
+      margin-left: 40px;
+      font-size: 14px;
+    }
 
-.tekst_indhold{
-    position: relative;
-    transform: translateY(-40px);
-    text-align: left;
-    max-width: 30ch;
-    margin-left: 80px;
-}
-
-.text-wrapper{
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-margin-top: 1rem;
-width: fit-content;
-margin: 0 auto;
-}
-}
-
-/****** Desktop ******/
-@media (min-width: 769px) {
-  .blaa_boks {
-    position: relative;
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-    gap: 0.5rem; 
-    text-align: left; 
-    margin-top: 200px;
-    margin-bottom: 100px;
+    .text-wrapper {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #333;
+      margin-top: 1rem;
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
 
-  /* Image of the person */
-  .image {
-    flex: 0 0 40%; 
-    max-width: 100%;
-    height: auto;
-    margin-right: 0; 
+  /****** Desktop ******/
+  @media (min-width: 769px) {
+    .blaa_boks {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 0.5rem;
+      text-align: left;
+      margin-top: 200px;
+      margin-bottom: 100px;
+    }
+
+    .image {
+      flex: 0 0 40%;
+      max-width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    .blueblob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-25%, -45%);
+      max-width: 65%;
+      height: auto;
+      z-index: -1;
+    }
+
+    /* Text content */
+    .tekst_indhold {
+      flex: 0 0 50%;
+      max-width: 65ch;
+      margin-left: 20px;
+      font-size: 20px;
+      margin-top: 65px;
+    }
+
+    .text-wrapper {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #333;
+      margin: 1rem auto;
+      width: fit-content;
+      text-align: center;
+    }
   }
-
-  /* Yellow blob */
-  .blueblob {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-30%, -50%);
-    max-width: 100%;
-    height: auto;
-    z-index: -1; 
-  }
-
-  /* Text content */
-  .tekst_indhold {
-    flex: 0 0 50%; 
-    max-width: 50ch; 
-    margin-left: 20px; 
-    padding-left: 0; 
-  }
-
- .text-wrapper {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 1rem auto; 
-    width: fit-content;
-    text-align: center; 
-}
-
-}
-
 </style>

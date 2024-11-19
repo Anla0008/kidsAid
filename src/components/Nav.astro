@@ -3,96 +3,93 @@
 ---
 
 <header class="nav">
-    <nav>
-        <img class="logo" src="public/gallery/kidsaidblack 1.svg" width="200" height="49" alt="KidsAID Logo">
-        <button id="menu-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul id="menu" class="hidden">
-            <li><a href="#om-kidsaid">Om KidsAid</a></li>
-            <li><a href="#indsamling">Indsamling</a></li>
-            <li><a href="#for-virksomheder">For Virksomheder</a></li>
-            <li><a href="#nyhedsbrev">Nyhedsbrev</a></li>
-            <li><a href="#kontakt-os">Kontakt Os</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <img class="logo" src="./gallery/kidsaidblack 1.svg" width="200" height="49" alt="KidsAID Logo" />
+    <button id="menu-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hidden">
+      <li><a href="#om-kidsaid">Om KidsAid</a></li>
+      <li><a href="#indsamling">Indsamling</a></li>
+      <li><a href="#for-virksomheder">For Virksomheder</a></li>
+      <li><a href="#nyhedsbrev">Nyhedsbrev</a></li>
+      <li><a href="#kontakt-os">Kontakt Os</a></li>
+    </ul>
+  </nav>
 </header>
 
-
 <style>
-/* Base styling */
-nav {
+  /* Base styling */
+  nav {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 20px; 
-    background-color: #C9E4FF;
-}
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #c9e4ff;
+  }
 
-nav ul {
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px; 
-}
+    gap: 20px;
+  }
 
-nav ul li a {
+  nav ul li a {
     text-decoration: none;
-    color: black; 
+    color: black;
     font-weight: 500;
-}
+  }
 
-/* Burger button styling */
-#menu-toggle {
+  /* Burger button styling */
+  #menu-toggle {
     display: none;
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-}
+  }
 
-#menu-toggle span {
+  #menu-toggle span {
     display: block;
     width: 25px;
     height: 3px;
     background-color: black;
-}
+  }
 
-/* Mobile styles */
-@media (max-width: 768px) {
+  /* Mobile styles */
+  @media (max-width: 768px) {
     #menu-toggle {
-        display: flex;
+      display: flex;
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #C9E4FF;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 5px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #c9e4ff;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 5px;
     }
 
     nav ul.show {
-        display: flex;
+      display: flex;
     }
-}
-
+  }
 </style>
 
 <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
 
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("show");
-    });
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
 </script>
-

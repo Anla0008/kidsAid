@@ -1,114 +1,117 @@
 ---
 
 ---
-        <div class="gul_boks">
-                <img class="image" src="/public/gallery/tryllekunstner.svg" alt="mand">
-                <img class="yellowblob" src="/public/gallery/yellowblob.svg" alt="Gul blob">
-                <div class="tekst_indhold">
-                <p>
-                   KidsAid Tryllerne er at finde over hele det danske land. De gør et kæmpe stykke arbejde for at hjælpe børn i alderen 0-20år igennem deres hospitalsophold. Om det er at holde dem i hånden under en blodprøve eller berolige og opmuntre dem inden en operation. Deres fineste opgave er at sørge for at børnene og deres familier får et lille afbræk fra den hverdag de har og få bare et øjeblik af magi at føle.<br><br>"For mig er det ikke bare trylleri – det er en mulighed for at skabe håb og glæde, når de har mest brug for det." - KidsAid tryller
-                </p>
-                <div class="text-wrapper">“</div>
-                </div>
-        </div>
+
+<div class="gul_boks">
+  <img class="image" src="./gallery/tryllekunstner.svg" alt="mand" />
+  <img class="yellowblob" src="./gallery/yellowblob.svg" alt="Gul blob" />
+  <div class="tekst_indhold">
+    <p>
+      KidsAid Tryllerne er at finde over hele Danmark. De gør et kæmpe stykke arbejde for at hjælpe børn i alderen 0-20år igennem deres hospitalsophold. Deres fineste opgave er at sørge for at børnene og deres familier får et lille afbræk fra den hverdag de har og få bare et øjeblik af magi at føle.<br /><br />"For mig er det ikke bare trylleri – det er en mulighed for at skabe håb og glæde, når de har mest brug for det." <br />
+      - KidsAid tryller
+    </p>
+    <div class="text-wrapper">“</div>
+  </div>
+</div>
 
 <style>
+  /**** Mobil *****/
+  @media (max-width: 768px) {
+    .gul_boks {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 100px;
+    }
 
-        /**** Mobil *****/
- @media (max-width: 768px) {
-.gul_boks {
-   position: relative;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 100px;
-}
+    /* Image of the person */
+    .image {
+      max-width: 100%;
+      height: auto;
+      z-index: -1;
+    }
 
-/* Image of the person */
-.image {
-max-width: 100%;
-height: auto;
-z-index: -1;
-}
+    /* Yellow blob */
+    .yellowblob {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1.1); /* Strækker blobben lodret */
+      max-width: 110%;
+      height: auto;
+      margin-top: 200px;
+    }
 
-/* Yellow blob */
-.yellowblob {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-max-width: 110%;
-height: auto;
-margin-top: 200px;
-}
+    .tekst_indhold {
+      position: relative;
+      text-align: left;
+      max-width: 32.5ch;
+      margin-left: 45px;
+      font-size: 14.5px;
+    }
 
-.tekst_indhold{
-    position: relative;
-    text-align: left;
-    max-width: 30ch;
-    margin-left: 80px;
-}
-
-.text-wrapper{
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-margin-top: 1rem;
-width: fit-content;
-margin: 0 auto;
-}
-}
-
-@media (min-width: 769px) {
-  .gul_boks {
-    position: relative;
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-    gap: 0.5rem; 
-    text-align: left; 
+    .text-wrapper {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #333;
+      margin-top: 1rem;
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
 
-  /* Image of the person */
-  .image {
-    flex: 0 0 40%; 
-    max-width: 100%;
-    height: auto;
-    margin-right: 0; 
+  @media (min-width: 769px) {
+    .gul_boks {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 0.5rem;
+      text-align: left;
+      margin-top: 200px;
+    }
+
+    /* Image of the person */
+    .image {
+      flex: 0 0 40%;
+      max-width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    /* Yellow blob */
+    .yellowblob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -50%);
+      max-width: 70%;
+      height: auto;
+      z-index: -1;
+    }
+
+    /* Text content */
+    .tekst_indhold {
+      flex: 0 0 50%;
+      max-width: 60ch;
+      margin-left: 20px;
+      padding-left: 0;
+      font-size: 20px;
+      margin-top: 50px;
+    }
+
+    .text-wrapper {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #333;
+      margin: 1.2rem auto;
+      width: fit-content;
+      text-align: center;
+      transform: translate(-50%, 70%);
+    }
   }
-
-  /* Yellow blob */
-  .yellowblob {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-30%, -50%);
-    max-width: 100%;
-    height: auto;
-    z-index: -1; 
-  }
-
-  /* Text content */
-  .tekst_indhold {
-    flex: 0 0 50%; 
-    max-width: 60ch; 
-    margin-left: 20px; 
-    padding-left: 0; 
-  }
-
- .text-wrapper {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 1rem auto; 
-    width: fit-content;
-    text-align: center; 
-}
-
-}
-
 </style>

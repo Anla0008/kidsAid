@@ -1,120 +1,120 @@
 ---
 
 ---
-        <div class="groen_boks">
-                <img class="image" src="/public/gallery/groenbillede.svg" alt="mand">
-                <img class="greenblob" src="/public/gallery/greenblob.svg" alt="Gul blob">
-                <div class="tekst_indhold">
-                <p>
-                   “Som ansvarlige for donationer i [Virksomhed] er det mig en ære at kunne sige, at vi har været med til at bidrage i den gode sags tjeneste.
-Da jeg hørte om KidsAid Tryllerne var jeg ikke et sekund i tvivl om, at det var et koncept vores virksomhed skulle støtte op om. Børnene på hospitalerne fortjene hver og en al den støtte og omsorg de overhovedet kan få”<br><br>
-                   – Donationsansvarlig, [Virksomhed]
-                </p>
-                <div class="text-wrapper">“</div>
-                </div>
-        </div>
+
+<div class="groen_boks">
+  <img class="image" src="./gallery/groenbillede.svg" alt="mand" />
+  <img class="greenblob" src="./gallery/greenblob.svg" alt="Gul blob" />
+  <div class="tekst_indhold">
+    <div class="text-wrapper">“</div>
+
+    <p>
+      “Som ansvarlige for donationer i [Virksomhed] er det mig en ære at kunne sige, at vi har været med til at bidrage i den gode sags tjeneste. Da jeg hørte om KidsAid Tryllerne var jeg ikke et sekund i tvivl om, at det var et koncept vores virksomhed skulle støtte op om. Børnene på hospitalerne fortjene hver og en al den støtte og omsorg de overhovedet kan få”<br /><br />
+      — Donationsansvarlig, [Virksomhed]
+    </p>
+  </div>
+</div>
 
 <style>
+  /**** Mobil *****/
+  @media (max-width: 768px) {
+    .groen_boks {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 100px;
+    }
 
-        /**** Mobil *****/
- @media (max-width: 768px) {
-.groen_boks {
-   position: relative;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 100px;
-}
+    /* Image of the person */
+    .image {
+      max-width: 100%;
+      height: auto;
+      z-index: -1;
+    }
 
-/* Image of the person */
-.image {
-max-width: 100%;
-height: auto;
-z-index: -1;
-}
+    /* Yellow blob */
+    .greenblob {
+      position: absolute;
+      bottom: 0;
+      left: 47.5%;
+      transform: translateX(-50%) scaleX(1.1);
+      max-width: 110%;
+      height: auto;
+    }
 
-/* Yellow blob */
-.greenblob {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-max-width: 110%;
-height: auto;
-margin-top: 200px;
-}
+    .tekst_indhold {
+      position: relative;
+      transform: translateY(-5px) translateX(-30px);
+      text-align: left;
+      max-width: 65ch;
+      margin-left: 70px;
+      font-size: 14px;
+    }
 
-.tekst_indhold{
-    position: relative;
-    transform: translateY(-30px);
-    text-align: left;
-    max-width: 30ch;
-    margin-left: 80px;
-}
-
-.text-wrapper{
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-margin-top: 1rem;
-width: fit-content;
-margin: 0 auto;
-}
-}
-
-/****** Desktop ******/
-@media (min-width: 769px) {
-  .groen_boks {
-    position: relative;
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: center; 
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-    gap: 0.5rem; 
-    text-align: left; 
-    margin-top: 200px;
-    margin-bottom: 100px;
+    .text-wrapper {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #333;
+      width: fit-content;
+      margin: 0 auto;
+    }
   }
 
-  /* Image of the person */
-  .image {
-    flex: 0 0 40%; 
-    max-width: 100%;
-    height: auto;
-    margin-right: 0; 
+  /****** Desktop ******/
+  @media (min-width: 769px) {
+    .groen_boks {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      gap: 0.5rem;
+      text-align: left;
+      margin-top: 200px;
+      margin-bottom: 100px;
+    }
+
+    /* Image of the person */
+    .image {
+      flex: 0 0 40%;
+      max-width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    /* Yellow blob */
+    .greenblob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -55%);
+      max-width: 75%;
+      height: auto;
+      z-index: -1;
+    }
+
+    /* Text content */
+    .tekst_indhold {
+      flex: 0 0 50%;
+      max-width: 38ch;
+      margin-left: 20px;
+      padding-left: 0;
+      font-size: 20px;
+      margin-top: 70px;
+    }
+
+    .text-wrapper {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #333;
+      margin: auto;
+      width: fit-content;
+      margin-top: -10rem;
+      transform: translate(-200%);
+    }
   }
-
-  /* Yellow blob */
-  .greenblob {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-30%, -50%);
-    max-width: 100%;
-    height: auto;
-    z-index: -1; 
-  }
-
-  /* Text content */
-  .tekst_indhold {
-    flex: 0 0 50%; 
-    max-width: 50ch; 
-    margin-left: 20px; 
-    padding-left: 0; 
-  }
-
- .text-wrapper {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #333;
-    margin: 1rem auto; 
-    width: fit-content;
-    text-align: center; 
-}
-
-}
-
 </style>
